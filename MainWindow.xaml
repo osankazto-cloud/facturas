@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:facturas"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Facturas - CTI Canarias" Height="600" Width="900">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Facturas">
+                <MenuItem Header="Emitir factura" Click="Menu_EmitirFactura_Click" />
+                <MenuItem Header="Facturas recibidas (XML)" Click="Menu_FacturasRecibidas_Click" />
+            </MenuItem>
+        </Menu>
 
-    </Grid>
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="433*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Width="600" Grid.Column="2" Margin="114,0,0,0" Height="118">
+                <TextBlock Text="Bienvenido a la aplicación de facturación de CTI Canarias" FontSize="18" FontWeight="Bold" TextAlignment="Center" Margin="0,0,0,20" />
+                <TextBlock Text="Utilice el menú "  FontWeight="Bold" TextAlignment="Center" />
+                <TextBlock Text="Facturas → Emitir factura" FontWeight="Bold" TextAlignment="Center" />
+                <TextBlock Text="o" Margin="0,5,0,5" FontWeight="Bold" TextAlignment="Center" />
+                <TextBlock Text="Facturas → Facturas recibidas (XML)" FontWeight="Bold" TextAlignment="Center" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
 </Window>

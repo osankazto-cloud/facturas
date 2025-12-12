@@ -20,5 +20,19 @@ namespace facturas
         {
             InitializeComponent();
         }
+
+        private void Menu_EmitirFactura_Click(object sender, RoutedEventArgs e)
+        {
+            var w = new EmitirFacturaWindow();
+            w.Owner = this;
+            w.ShowDialog();
+        }
+
+        private void Menu_FacturasRecibidas_Click(object sender, RoutedEventArgs e)
+        {
+            var w = new FacturasRecibidasWindow();
+            w.Owner = this;
+            w.ShowDialog();
+        }
     }
 }
