@@ -26,12 +26,16 @@
                     <Button Content="Cargar desde archivo" Click="BtnCargarDesdeArchivo_Click" Margin="5" />
                 </StackPanel>
             </StackPanel>
-            <StackPanel Grid.Column="1" Margin="10">
+
+            <StackPanel Grid.Column="1" Margin="10">
                 <TextBox x:Name="TxtVista" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Height="400" IsReadOnly="True" />
             </StackPanel>
         </Grid>
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Content="Cargar XML de ejemplo" Click="BtnCargarEjemplo_Click" Margin="5" />
+            <Button Content="Generar INSERT" Click="BtnGenerarInsert_Click" Margin="5" />
+            <Button Content="Subir a BD (configurar)" Click="BtnUploadToDb_Click" Margin="5" IsEnabled="False" />
             <Button Content="Cerrar" Click="BtnCerrar_Click" Margin="5" />
         </StackPanel>
     </Grid>

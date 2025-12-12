@@ -5,12 +5,14 @@ using System.Linq;
 using System.Windows;
 using System.Xml.Linq;
 using Microsoft.Win32;
+using facturas.Data;
 
 namespace facturas
 {
     public partial class FacturasRecibidasWindow : Window
     {
         public ObservableCollection<XmlFactura> Archivos { get; set; } = new ObservableCollection<XmlFactura>();
+        private readonly SqlQueryService _sqlService = new SqlQueryService();
 
         public FacturasRecibidasWindow()
         {
@@ -128,9 +130,34 @@ namespace facturas
             }
         }
 
+        private void BtnGenerarInsert_Click(object sender, RoutedEventArgs e)
+        {
+            if (LbArchivos.SelectedItem is XmlFactura xf)
+            {
+                try
+                {
+                    var rec = _sqlService.GenerateInsertFromXml(xf.Contenido);
+                    MessageBox.Show("INSERT guardado en Data/queries.json.", "Generado", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al generar INSERT: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una factura.", "Atención", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
         private void BtnImprimirPdf_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Se generará un PDF con la factura recibida (simulación).", "Imprimir PDF", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void BtnUploadToDb_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Funcionalidad de subida a BD pendiente de configuración.", "Subir a BD", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void BtnCerrar_Click(object sender, RoutedEventArgs e)

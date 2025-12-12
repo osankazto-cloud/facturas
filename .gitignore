@@ -365,3 +365,8 @@ FodyWeavers.xsd
 # Allow published exe from Release for distribution (specific publish folder)
 !bin/Release/net8.0-windows/win-x64/publish/
 !bin/Release/net8.0-windows/win-x64/publish/*
+
+## Ignore runtime-generated queries.json (created by the running EXE)
+Data/queries.json
+# Also ignore queries.json under bin output folders just in case
+bin/**/Data/queries.json
