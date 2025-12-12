@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Factura>
+  <Codigo>CTI-20251212123703</Codigo>
+  <Cabecera>
+    <Proveedor>CTI Canarias SL</Proveedor>
+    <NIF>B76543210</NIF>
+    <Direccion>Calle Tenerife 5, 38001, Las Palmas</Direccion>
+    <Telefono>(+34) 928 000 111</Telefono>
+    <Fecha>2025-12-12</Fecha>
+    <Numero>CTI-20251212123703</Numero>
+  </Cabecera>
+  <Conceptos>
+    <Concepto>
+      <Codigo>SRV-001</Codigo>
+      <Descripcion>Servicios de consultoria tecnica - 10h</Descripcion>
+      <Cantidad>10</Cantidad>
+      <PrecioUnitario>60.00</PrecioUnitario>
+      <Importe>600.00</Importe>
+    </Concepto>
+    <Concepto>
+      <Codigo>zsdasd</Codigo>
+      <Descripcion>asdasd</Descripcion>
+      <Cantidad>1</Cantidad>
+      <PrecioUnitario>2333.00</PrecioUnitario>
+      <Importe>2333.00</Importe>
+    </Concepto>
+    <Concepto>
+      <Codigo>23</Codigo>
+      <Descripcion>aqwsd</Descripcion>
+      <Cantidad>111</Cantidad>
+      <PrecioUnitario>222.00</PrecioUnitario>
+      <Importe>24642.00</Importe>
+    </Concepto>
+  </Conceptos>
+  <Pie>
+    <BaseImponible>27575.00</BaseImponible>
+    <Iva>5790.75</Iva>
+    <Total>33365.75</Total>
+    <Observaciones></Observaciones>
+  </Pie>
+</Factura>
