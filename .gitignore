@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Allow published exe from Release for distribution (specific publish folder)
+!bin/Release/net8.0-windows/win-x64/publish/
+!bin/Release/net8.0-windows/win-x64/publish/*
